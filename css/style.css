@@ -393,17 +393,16 @@ section {
   object-fit: contain;
   /* opacity: 0; */
 }
-/* .hero-prev-btn .on,
+.hero-prev-btn .on,
 .hero-next-btn .on {
-  opacity: 1;
+  /* opacity: 1; */
 }
 
-.hero-prev-btn .off,
+/* .hero-prev-btn .off,
 .hero-next-btn .off {
   opacity: 0.35;
 } */
-
-.keywords {
+*/ .keywords {
   width: 100%;
   height: 85px;
   background-color: yellow;
