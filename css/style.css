@@ -221,7 +221,7 @@ section {
   background-size: cover;
   /* Figma: Effect -> Layer blur */
   filter: blur(3px);
-  transition: backgroun-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
 }
 .hero .main-visual .main-visual-bg::after {
   content: "";
@@ -375,7 +375,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* opacity: 0; */
+  opacity: 0;
 }
 .hero-next-btn {
   position: absolute;
@@ -393,18 +393,48 @@ section {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* opacity: 0; */
+  opacity: 0;
 }
 .hero-prev-btn .on,
 .hero-next-btn .on {
-  /* opacity: 1; */
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 
-/* .hero-prev-btn .off,
+.hero-prev-btn .off,
 .hero-next-btn .off {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.hero-prev-btn.swiper-button-disabled,
+.hero-next-btn.swiper-button-disabled {
   opacity: 0.35;
-} */
-*/ .keywords {
+  cursor: auto;
+  pointer-events: none;
+}
+.sw-hero .pagination {
+  position: absolute;
+  left: calc(50% + 140px);
+  top: 465px;
+  z-index: 100;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sw-hero .pagination .play-stop-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5) url("../assets/icons/slide_stop.png") no-repeat
+    center;
+  background-size: 8px 10px;
+  text-indent: -9999px;
+  border-radius: 50%;
+}
+
+.keywords {
   width: 100%;
   height: 85px;
   background-color: yellow;
